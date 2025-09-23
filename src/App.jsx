@@ -25,49 +25,49 @@ export default function App() {
       blurb:
         "Begeleidt verhuur aan erkende vluchtelingen en ondersteunt nieuwkomers richting duurzame integratie.",
       url: "https://eenhartvoorvluchtelingen.be/",
-      logo: "https://eenhartvoorvluchtelingen.be/favicon.ico",
+      logo: "https://eenhartvoorvluchtelingen.be/wp-content/uploads/2023/11/cropped-ehvv-favicon-192x192.png",
     },
     {
       name: "Het Pandschap / Pandschap Invest",
       blurb:
         "Koopt/renoveert panden en zet ze in voor sociale verhuur met focus op kwaliteit en betaalbaarheid.",
       url: "https://pandschap.be/",
-      logo: "https://pandschap.be/favicon.ico",
+      logo: "https://pandschap.be/wp-content/uploads/2021/05/cropped-favicon-192x192.png",
     },
     {
       name: "CLT Gent",
       blurb:
         "Community Land Trust die betaalbaar wonen realiseert door grond en woning te scheiden.",
       url: "https://www.cltgent.be/",
-      logo: "https://www.cltgent.be/favicon.ico",
+      logo: "https://www.cltgent.be/wp-content/uploads/2022/06/cropped-favicon-192x192.png",
     },
     {
       name: "Orbit vzw",
       blurb:
         "Werkt rond migratie, armoede en een menswaardig woonbeleid; verbindt lokale netwerken.",
       url: "https://www.orbitvzw.be/",
-      logo: "https://www.orbitvzw.be/favicon.ico",
+      logo: "https://www.orbitvzw.be/wp-content/uploads/2022/10/cropped-orbit-favicon-180x180.png",
     },
     {
       name: "VZW Thope",
       blurb:
         "Begeleidt erkende vluchtelingen en kwetsbare gezinnen naar en tijdens hun huurtraject.",
       url: "https://www.thopevzw.be/",
-      logo: "https://www.thopevzw.be/favicon.ico",
+      logo: "https://www.thopevzw.be/wp-content/uploads/2023/02/cropped-favicon-192x192.png",
     },
     {
       name: "Huizen van de Vrede vzw",
       blurb:
         "Zoekt en begeleidt huurwoningen in Brugge, met warme ondersteuning voor huurders en verhuurders.",
       url: "https://www.huizenvanvredevzw.be/",
-      logo: "https://www.huizenvanvredevzw.be/favicon.ico",
+      logo: "https://www.huizenvanvredevzw.be/wp-content/uploads/2024/01/cropped-favicon-192x192.png",
     },
     {
       name: "Fedasil",
       blurb:
         "Coördineert opvang en doorstroming van verzoekers om internationale bescherming.",
       url: "https://www.fedasil.be/",
-      logo: "https://www.fedasil.be/favicon.ico",
+      logo: "https://www.fedasil.be/themes/custom/fedasil/favicon.ico",
     },
     {
       name: "IOM (VN Migratieagentschap)",
@@ -81,7 +81,7 @@ export default function App() {
       blurb:
         "Zoekt huurwoningen in heel België voor erkende vluchtelingen; verbindt eigenaars en huurders.",
       url: "https://www.fedasil.be/en/news/paths-project-housing",
-      logo: "https://www.fedasil.be/favicon.ico",
+      logo: "https://www.fedasil.be/themes/custom/fedasil/favicon.ico",
     },
   ];
 
@@ -105,10 +105,11 @@ export default function App() {
             <a href="#wat" className="hover:text-emerald-700">Wat zoeken we</a>
             <a href="#beloning" className="hover:text-emerald-700">Beloning</a>
             <a href="#partners" className="hover:text-emerald-700">Partners</a>
+            <a href="#formulier" className="hover:text-emerald-700">Formulier</a>
             <a href="#faq" className="hover:text-emerald-700">FAQ</a>
             <a href="#contact" className="hover:text-emerald-700">Contact</a>
           </nav>
-          <a href="#tip" className="rounded-xl bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700">Tip een pand</a>
+          <a href="#formulier" className="rounded-xl bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700">Tip een pand</a>
         </div>
       </header>
 
@@ -122,7 +123,7 @@ export default function App() {
             Veel mensen vinden moeilijk een woning. Vaak beschikken zij over een inkomen of ondersteuning, maar botsen ze op barrières. Met <em>Tip een Thuis</em> bundelen we krachten om de instroom van beschikbare panden te vergroten — warm, professioneel en samen met jou.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="#tip" className="rounded-xl bg-emerald-600 px-6 py-3 font-medium text-white hover:bg-emerald-700">Deel je tip</a>
+            <a href="#formulier" className="rounded-xl bg-emerald-600 px-6 py-3 font-medium text-white hover:bg-emerald-700">Deel je tip</a>
             <a href="#hoe" className="rounded-xl border border-neutral-300 px-6 py-3 font-medium hover:border-neutral-400">Hoe werkt het?</a>
           </div>
         </div>
@@ -150,29 +151,120 @@ export default function App() {
 
       {/* Wat zoeken we */}
       <section id="wat" className="border-t border-neutral-200 bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-4 py-14">
+        <div className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="text-3xl font-semibold tracking-tight">Wat zoeken we?</h2>
-          <p className="mt-4 max-w-3xl text-neutral-700">Afhankelijk van de regio zoeken partnerorganisaties verschillende types panden:</p>
-          <ul className="mt-6 space-y-3 text-sm text-neutral-700">
-            <li><strong>Gent</strong>: huurwoningen (Een Hart Voor Vluchtelingen, Thope), koopwoningen en appartementen (Pandschap Invest), bouwgrond (CLT Gent).</li>
-            <li><strong>Brugge</strong>: huurwoningen (Huizen van de Vrede), koopwoningen (MORE LION, Pandschap Invest).</li>
-            <li><strong>Heel België</strong>: huurwoningen via het PATHS-project van Fedasil en IOM.</li>
-          </ul>
-          <p className="mt-6 text-sm text-neutral-700">Ook buddy’s en vrijwilligers zijn welkom!</p>
+          <p className="mt-4 max-w-3xl text-neutral-700 text-lg leading-relaxed">Afhankelijk van de regio zoeken partnerorganisaties verschillende types panden. We mikken op kwalitatieve, veilige woningen met correcte prijzen.</p>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            <div className="rounded-2xl border border-neutral-200 bg-white p-6">
+              <h3 className="text-lg font-semibold">Gent</h3>
+              <ul className="mt-3 space-y-2 text-neutral-700">
+                <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-600"></span>Huurwoningen (Een Hart Voor Vluchtelingen, Thope)</li>
+                <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-600"></span>Koopwoningen & appartementen (Pandschap Invest)</li>
+                <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-600"></span>Bouwgrond (CLT Gent)</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-neutral-200 bg-white p-6">
+              <h3 className="text-lg font-semibold">Brugge</h3>
+              <ul className="mt-3 space-y-2 text-neutral-700">
+                <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-600"></span>Huurwoningen (Huizen van de Vrede)</li>
+                <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-600"></span>Koopwoningen (MORE LION, Pandschap Invest)</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-neutral-200 bg-white p-6">
+              <h3 className="text-lg font-semibold">Heel België</h3>
+              <ul className="mt-3 space-y-2 text-neutral-700">
+                <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-600"></span>Huurwoningen via PATHS-project (Fedasil & IOM)</li>
+                <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-600"></span>Eigenaars die willen verhuren/verkopen aan de doelgroep</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm text-emerald-900">Ook buddy’s en vrijwilligers zijn welkom!</div>
         </div>
       </section>
 
-      {/* Tipformulier */}
-      <section id="tip" className="border-t border-neutral-200 bg-white">
+      {/* Beloning */}
+      <section id="beloning" className="border-t border-neutral-200 bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <h2 className="text-3xl font-semibold tracking-tight">Welke beloning krijg ik?</h2>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
+              <ul className="space-y-3 text-neutral-800 text-base leading-relaxed">
+                <li><span className="font-semibold">Verhuur via partnerorganisatie:</span> supermarktbon t.w.v. €200.</li>
+                <li><span className="font-semibold">Verkoop woning:</span> verblijf van 5 dagen voor 6 personen in Spanje (finca La Perla Verde, enjoymicasa.be).</li>
+                <li><span className="font-semibold">Verkoop grond:</span> nog te bepalen.</li>
+              </ul>
+              <p className="mt-4 text-sm text-neutral-600">Beloningen worden uitgereikt wanneer jouw tip daadwerkelijk leidt tot verhuur of verkoop aan de doelgroep.</p>
+            </div>
+            <figure className="overflow-hidden rounded-2xl border border-neutral-200 bg-white">
+              <img src="/images/la-perla-verde.jpg" alt="Finca La Perla Verde in de heuvels" className="h-full w-full object-cover" />
+              <figcaption className="px-4 py-3 text-center text-sm text-neutral-600">Finca La Perla Verde – voorbeeld van verblijf bij succesvolle tip</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners: grid tiles + logo strip */}
+      <section id="partners" className="border-t border-neutral-200 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-14">
-          <h2 className="text-3xl font-semibold tracking-tight">Tip een pand</h2>
+          <h2 className="text-3xl font-semibold tracking-tight">Partners</h2>
+          <p className="mt-3 max-w-3xl text-neutral-700">
+            Tip een Thuis is een burgerinitiatief, gedragen door organisaties die actief zijn rond huisvesting en steun aan vluchtelingen. We brengen tipgevers in contact met hen en faciliteren de beloning van goede tips.
+          </p>
+
+          {/* Grid van tegels met logo en link */}
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {partners.map((p) => (
+              <article key={p.name} className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <a href={p.url} target="_blank" rel="noreferrer" className="shrink-0">
+                    <img src={p.logo} alt={`${p.name} logo`} className="h-8 w-auto rounded-sm" />
+                  </a>
+                  <h3 className="text-base font-semibold">{p.name}</h3>
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-neutral-700">{p.blurb}</p>
+                <a
+                  href={p.url}
+                  className="mt-4 inline-block text-sm font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-800"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Bezoek website
+                </a>
+              </article>
+            ))}
+          </div>
+
+          {/* Logo strip onderaan */}
+          <div className="mt-12 border-t border-neutral-200 pt-6">
+            <p className="mb-4 text-sm text-neutral-600">Met steun van onze partners:</p>
+            <div className="grid grid-cols-2 gap-6 md:grid-cols-6">
+              {partners.map((p) => (
+                <div key={`${p.name}-logo`} className="flex items-center justify-center">
+                  <a href={p.url} target="_blank" rel="noreferrer" aria-label={`${p.name} website`}>
+                    <img
+                      src={p.logo}
+                      alt={`${p.name} logo`}
+                      className="h-10 w-auto opacity-90 grayscale hover:opacity-100 hover:grayscale-0"
+                    />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Formulier */}
+      <section id="formulier" className="border-t border-neutral-200 bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-16">
+          <h2 className="text-3xl font-semibold tracking-tight">Formulier</h2>
           {sent ? (
             <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-6">
               <h3 className="font-medium text-emerald-800">Bedankt! Je tip is verstuurd.</h3>
               <p className="mt-2 text-sm text-emerald-900">We koppelen terug zodra een partnerorganisatie je tip heeft bekeken.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
+            <form onSubmit={handleSubmit} className="mt-6 space-y-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
               <div className="grid gap-4 md:grid-cols-2">
                 <div>
                   <label className="block text-sm font-medium">Naam</label>
@@ -214,68 +306,9 @@ export default function App() {
                 <input id="akkoord" type="checkbox" checked={form.akkoord} onChange={(e)=>setForm({...form, akkoord:e.target.checked})} className="mt-1 h-5 w-5 rounded border-neutral-300" required />
                 <label htmlFor="akkoord" className="text-sm text-neutral-700">Ik ga akkoord dat Tip een Thuis mijn gegevens verwerkt om mijn tip te beoordelen en te delen met partnerorganisaties.</label>
               </div>
-              <button type="submit" className="w-full rounded-xl bg-emerald-600 px-5 py-3 font-medium text-white hover:bg-emerald-700">Verzend tip</button>
+              <button type="submit" className="w-full rounded-xl bg-emerald-600 px-5 py-3 font-medium text-white hover:bg-emerald-700">Verzend</button>
             </form>
           )}
-        </div>
-      </section>
-
-      {/* Beloning */}
-      <section id="beloning" className="border-t border-neutral-200 bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-4 py-14">
-          <h2 className="text-3xl font-semibold tracking-tight">Welke beloning krijg ik?</h2>
-          <ul className="mt-6 space-y-4 text-sm text-neutral-700">
-            <li><strong>Verhuur via partnerorganisatie:</strong> supermarktbon t.w.v. €200.</li>
-            <li><strong>Verkoop woning:</strong> verblijf van 5 dagen voor 6 personen in Spanje (finca La Perla Verde, enjoymicasa.be).</li>
-            <li><strong>Verkoop grond:</strong> nog te bepalen.</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Partners: grid tiles + logo strip */}
-      <section id="partners" className="border-t border-neutral-200 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-14">
-          <h2 className="text-3xl font-semibold tracking-tight">Partners</h2>
-          <p className="mt-3 max-w-3xl text-neutral-700">
-            Tip een Thuis is een burgerinitiatief, gedragen door organisaties die actief zijn rond huisvesting en steun aan vluchtelingen. We brengen tipgevers in contact met hen en faciliteren de beloning van goede tips.
-          </p>
-
-          {/* Grid van tegels met logo en link */}
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {partners.map((p) => (
-              <article key={p.name} className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <img src={p.logo} alt={`${p.name} logo`} className="h-8 w-auto" />
-                  <h3 className="text-base font-semibold">{p.name}</h3>
-                </div>
-                <p className="mt-3 text-sm leading-relaxed text-neutral-700">{p.blurb}</p>
-                <a
-                  href={p.url}
-                  className="mt-4 inline-block text-sm font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-800"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Bezoek website
-                </a>
-              </article>
-            ))}
-          </div>
-
-          {/* Logo strip onderaan */}
-          <div className="mt-12 border-t border-neutral-200 pt-6">
-            <p className="mb-4 text-sm text-neutral-600">Met steun van onze partners:</p>
-            <div className="grid grid-cols-2 gap-6 md:grid-cols-5">
-              {partners.map((p) => (
-                <div key={`${p.name}-logo`} className="flex items-center justify-center">
-                  <img
-                    src={p.logo}
-                    alt={`${p.name} logo`}
-                    className="h-10 w-auto opacity-90 grayscale hover:opacity-100 hover:grayscale-0"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
@@ -283,7 +316,7 @@ export default function App() {
       <section id="faq" className="border-t border-neutral-200 bg-neutral-50">
         <div className="mx-auto max-w-6xl px-4 py-14">
           <h2 className="text-3xl font-semibold tracking-tight">Veelgestelde vragen</h2>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
             {[{
               q: "Hoe weet ik of mijn tip in aanmerking komt?",
               a: "De partnerorganisatie bekijkt elke tip zorgvuldig en beoordeelt of deze past binnen hun werking.",
