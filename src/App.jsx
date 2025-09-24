@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 /**
- * Tip een Thuis â€” Landing page (Vite + React + Tailwind)
+ * Tip een Thuis Ã¢â‚¬â€ Landing page (Vite + React + Tailwind)
  * - Hero met achtergrondbanner (/public/images/banner.jpg)
  * - Hoe werkt het (met correcte JSX-link)
  * - Wat zoeken we
@@ -14,14 +14,8 @@ import React, { useState } from "react";
 
 // Helper: slim logo-element dat meerdere extensies probeert (png/jpg/jpeg/svg/webp)
 function LogoImg({ base, className = "h-8 w-auto", alt = "logo" }) {
-  const candidates = [
-    /images/partners/\.avif,
-    /images/partners/\.webp,
-    /images/partners/\.png,
-    /images/partners/\.svg,
-    /images/partners/\.jpg,
-    /images/partners/\.jpeg,
-  ];
+  const candidates = ['avif','webp','png','svg','jpg','jpeg']
+  .map(ext => `/images/partners/${base}.${ext}`);
   const [idx, setIdx] = React.useState(0);
   const src = candidates[idx];
   if (!src) return null;
@@ -65,11 +59,11 @@ export default function App() {
     { key: "huizenvanvrede", name: "Huizen van de Vrede vzw",          url: "https://www.huizenvanvredevzw.be/",
       blurb: "Zoekt en begeleidt huurwoningen in Brugge, met warme ondersteuning voor huurders en verhuurders." },
     { key: "fedasil",      name: "Fedasil",                          url: "https://www.fedasil.be/",
-      blurb: "CoÃ¶rdineert opvang en doorstroming van verzoekers om internationale bescherming." },
+      blurb: "CoÃƒÂ¶rdineert opvang en doorstroming van verzoekers om internationale bescherming." },
     { key: "iom",          name: "IOM (VN Migratieagentschap)",      url: "https://www.iom.int/",
       blurb: "Internationale Organisatie voor Migratie; partner in duurzame woontrajecten." },
     { key: "paths",        name: "PATHS-project",                    url: "https://www.fedasil.be/en/news/paths-project-housing",
-      blurb: "Zoekt huurwoningen in heel BelgiÃ« voor erkende vluchtelingen; verbindt eigenaars en huurders." },
+      blurb: "Zoekt huurwoningen in heel BelgiÃƒÂ« voor erkende vluchtelingen; verbindt eigenaars en huurders." },
   ];
 
   function handleSubmit(e) {
@@ -110,7 +104,7 @@ export default function App() {
             Iedereen verdient een <span className="text-emerald-700">thuis</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-800">
-            Veel mensen vinden moeilijk een woning. Vaak beschikken zij over een inkomen of ondersteuning, maar botsen ze op barriÃ¨res. Met <em>Tip een Thuis</em> bundelen we krachten om de instroom van beschikbare panden te vergroten â€” warm, professioneel en samen met jou.
+            Veel mensen vinden moeilijk een woning. Vaak beschikken zij over een inkomen of ondersteuning, maar botsen ze op barriÃƒÂ¨res. Met <em>Tip een Thuis</em> bundelen we krachten om de instroom van beschikbare panden te vergroten Ã¢â‚¬â€ warm, professioneel en samen met jou.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a href="#formulier" className="rounded-xl bg-emerald-600 px-6 py-3 font-medium text-white hover:bg-emerald-700">Deel je tip</a>
@@ -188,14 +182,14 @@ export default function App() {
               </ul>
             </div>
             <div className="rounded-2xl border border-neutral-200 bg-white p-6">
-              <h3 className="text-lg font-semibold">Heel BelgiÃ«</h3>
+              <h3 className="text-lg font-semibold">Heel BelgiÃƒÂ«</h3>
               <ul className="mt-3 space-y-2 text-neutral-700">
                 <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-600" />Huurwoningen via PATHS-project (Fedasil & IOM)</li>
                 <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-600" />Eigenaars die willen verhuren/verkopen aan de doelgroep</li>
               </ul>
             </div>
           </div>
-          <div className="mt-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm text-emerald-900">Ook buddyâ€™s en vrijwilligers zijn welkom!</div>
+          <div className="mt-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm text-emerald-900">Ook buddyÃ¢â‚¬â„¢s en vrijwilligers zijn welkom!</div>
         </div>
       </section>
 
@@ -216,7 +210,7 @@ export default function App() {
                   <input required value={form.naam} onChange={(e)=>setForm({...form, naam:e.target.value})} className="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2"/>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium">Eâ€‘mail</label>
+                  <label className="block text-sm font-medium">EÃ¢â‚¬â€˜mail</label>
                   <input type="email" required value={form.email} onChange={(e)=>setForm({...form, email:e.target.value})} className="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2"/>
                 </div>
               </div>
@@ -266,7 +260,7 @@ export default function App() {
             <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-50">
               <div className="h-40 bg-[url('/images/beloning-bon.jpg')] bg-cover bg-center" aria-hidden></div>
               <div className="p-5">
-                <h3 className="text-lg font-semibold">Supermarktbon t.w.v. â‚¬200</h3>
+                <h3 className="text-lg font-semibold">Supermarktbon t.w.v. Ã¢â€šÂ¬200</h3>
                 <p className="mt-2 text-sm text-neutral-700">Bij succesvolle <em>verhuur</em> via een partnerorganisatie.</p>
               </div>
             </article>
@@ -275,14 +269,14 @@ export default function App() {
               <div className="p-5">
                 <h3 className="text-lg font-semibold">5 dagen in Spanje (6p)</h3>
                 <p className="mt-2 text-sm text-neutral-700">Bij succesvolle <em>verkoop van een woning</em>. Verblijf in Finca La Perla Verde.</p>
-                <a href="https://enjoymicasa.be" target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-emerald-700 underline underline-offset-4">Meer over enjoymicasa<span aria-hidden>â†—</span></a>
+                <a href="https://enjoymicasa.be" target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-emerald-700 underline underline-offset-4">Meer over enjoymicasa<span aria-hidden>Ã¢â€ â€”</span></a>
               </div>
             </article>
             <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-50">
               <div className="h-40 bg-[url('/images/beloning-grond.jpg')] bg-cover bg-center" aria-hidden></div>
               <div className="p-5">
                 <h3 className="text-lg font-semibold">Verkoop van grond</h3>
-                <p className="mt-2 text-sm text-neutral-700">Beloning nog te bepalen â€” we houden je op de hoogte.</p>
+                <p className="mt-2 text-sm text-neutral-700">Beloning nog te bepalen Ã¢â‚¬â€ we houden je op de hoogte.</p>
               </div>
             </article>
           </div>
@@ -346,7 +340,7 @@ export default function App() {
       <footer className="border-t border-neutral-200 bg-neutral-50">
         <div className="mx-auto max-w-6xl px-4 py-10 text-sm text-neutral-600">
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <p>Â© {new Date().getFullYear()} Tip een Thuis. Alle rechten voorbehouden.</p>
+            <p>Ã‚Â© {new Date().getFullYear()} Tip een Thuis. Alle rechten voorbehouden.</p>
             <div className="flex gap-4">
               <a href="#hoe" className="hover:text-neutral-800">Hoe werkt het</a>
               <a href="#wat" className="hover:text-neutral-800">Wat zoeken we</a>
