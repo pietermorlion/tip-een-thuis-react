@@ -7,7 +7,6 @@ import React, { useState } from "react";
  * - Alle assets onder /public/images/...
  */
 
-// Voorkeurs-extensie per logo (match je echte bestanden in /public/images/partners)
 const PREFERRED_EXT = {
   morelion: "jpg",
   ehvv: "jpg",
@@ -17,15 +16,13 @@ const PREFERRED_EXT = {
   thope: "png",
   fedasil: "png",
   iom: "png",
-  huizenvanvrede: "jpg", // jij gebruikt nu huizenvanvrede.jpg
-  enjoymicasa: "png",    // sponsor
-  paths: "png"           // voeg toe als je het bestand hebt
+  huizenvanvrede: "jpg",
+  enjoymicasa: "png",
+  paths: "png"
 };
 
-// Generic fallback-volgorde (als preferred ontbreekt)
 const BASE_ORDER = ["png", "jpg", "jpeg", "svg", "webp", "avif"];
 
-// Slimme logo-loader: probeert eerst preferred, dan fallbackvolgorde
 function LogoImg({ base, className = "h-8 w-auto", alt = "logo" }) {
   const preferred = PREFERRED_EXT[base];
   const extOrder = preferred
@@ -62,7 +59,6 @@ export default function App() {
   });
   const [sent, setSent] = useState(false);
 
-  // Let op: keys moeten overeenkomen met de bestandsbasen in /public/images/partners/
   const partners = [
     { key: "morelion", name: "MORE LION", url: "https://www.more-lion.com/",
       blurb: "Innovatiestudio; facilitatie van burgerinitiatief en projecten rond sociaal wonen." },
@@ -121,10 +117,10 @@ export default function App() {
           <div className="absolute inset-0 bg-emerald-900/15 mix-blend-multiply" />
         </div>
         <div className="relative mx-auto max-w-4xl px-4 py-16 text-center">
-          <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
-            Iedereen verdient een <span className="text-emerald-700">thuis</span>
+          <h1 className="text-4xl font-bold tracking-tight md:text-5xl text-white drop-shadow-lg">
+            Iedereen verdient een <span className="text-emerald-200">thuis</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-800">
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-white drop-shadow">
             Veel mensen vinden moeilijk een woning. Met <em>Tip een Thuis</em> bundelen we krachten
             om de instroom van beschikbare panden te vergroten — warm, professioneel en samen met jou.
           </p>
@@ -135,7 +131,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* ... rest van het bestand blijft ongewijzigd ... */}
+      {/* ... rest van je bestand blijft hetzelfde ... */}
     </div>
   );
 }
