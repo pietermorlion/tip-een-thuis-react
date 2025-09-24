@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 
 /**
  * Tip een Thuis â€” Landing page (Vite + React + Tailwind)
@@ -15,11 +15,12 @@
 // Helper: slim logo-element dat meerdere extensies probeert (png/jpg/jpeg/svg/webp)
 function LogoImg({ base, className = "h-8 w-auto", alt = "logo" }) {
   const candidates = [
-    `/images/partners/${base}.png`,
-    `/images/partners/${base}.jpg`,
-    `/images/partners/${base}.jpeg`,
-    `/images/partners/${base}.svg`,
-    `/images/partners/${base}.webp`,
+    /images/partners/\.avif,
+    /images/partners/\.webp,
+    /images/partners/\.png,
+    /images/partners/\.svg,
+    /images/partners/\.jpg,
+    /images/partners/\.jpeg,
   ];
   const [idx, setIdx] = React.useState(0);
   const src = candidates[idx];

@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/",
+      "missing": [{ "type": "file", "value": "/" }]
+    }
+  ]
+}
