@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 /**
- * Tip een Thuis ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Landing page (Vite + React + Tailwind)
+ * Tip een Thuis ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â Landing page (Vite + React + Tailwind)
  * - Hero met achtergrondbanner (/public/images/banner.jpg)
  * - Hoe werkt het (met correcte JSX-link)
  * - Wat zoeken we
@@ -14,6 +14,10 @@ import React, { useState } from "react";
 
 // Helper: slim logo-element dat meerdere extensies probeert (png/jpg/jpeg/svg/webp)
 function LogoImg({ base, className = "h-8 w-auto", alt = "logo" }) {
+const preferred = { huizenvanvrede: 'jpg' };
+const baseOrder = ['avif','webp','png','svg','jpg','jpeg'];
+const extOrder = preferred[base] ? [preferred[base], ...baseOrder.filter(e => e !== preferred[base])] : baseOrder;
+const candidates = extOrder.map(ext => `/images/partners/${base}.${ext}`);
   const candidates = ['avif','webp','png','svg','jpg','jpeg']
   .map(ext => `/images/partners/${base}.${ext}`);
 
@@ -55,7 +59,7 @@ function LogoImg({ base, className = "h-8 w-auto", alt = "logo" }) {
             Iedereen verdient een <span className="text-emerald-700">thuis</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-800">
-            Veel mensen vinden moeilijk een woning. Vaak beschikken zij over een inkomen of ondersteuning, maar botsen ze op barriÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨res. Met <em>Tip een Thuis</em> bundelen we krachten om de instroom van beschikbare panden te vergroten ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â warm, professioneel en samen met jou.
+            Veel mensen vinden moeilijk een woning. Vaak beschikken zij over een inkomen of ondersteuning, maar botsen ze op barriÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¨res. Met <em>Tip een Thuis</em> bundelen we krachten om de instroom van beschikbare panden te vergroten ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â warm, professioneel en samen met jou.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a href="#formulier" className="rounded-xl bg-emerald-600 px-6 py-3 font-medium text-white hover:bg-emerald-700">Deel je tip</a>
@@ -133,14 +137,14 @@ function LogoImg({ base, className = "h-8 w-auto", alt = "logo" }) {
               </ul>
             </div>
             <div className="rounded-2xl border border-neutral-200 bg-white p-6">
-              <h3 className="text-lg font-semibold">Heel BelgiÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â«</h3>
+              <h3 className="text-lg font-semibold">Heel BelgiÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â«</h3>
               <ul className="mt-3 space-y-2 text-neutral-700">
                 <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-600" />Huurwoningen via PATHS-project (Fedasil & IOM)</li>
                 <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-600" />Eigenaars die willen verhuren/verkopen aan de doelgroep</li>
               </ul>
             </div>
           </div>
-          <div className="mt-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm text-emerald-900">Ook buddyÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s en vrijwilligers zijn welkom!</div>
+          <div className="mt-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm text-emerald-900">Ook buddyÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢s en vrijwilligers zijn welkom!</div>
         </div>
       </section>
 
@@ -161,7 +165,7 @@ function LogoImg({ base, className = "h-8 w-auto", alt = "logo" }) {
                   <input required value={form.naam} onChange={(e)=>setForm({...form, naam:e.target.value})} className="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2"/>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium">EÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“mail</label>
+                  <label className="block text-sm font-medium">EÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¹Ã…â€œmail</label>
                   <input type="email" required value={form.email} onChange={(e)=>setForm({...form, email:e.target.value})} className="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2"/>
                 </div>
               </div>
@@ -211,7 +215,7 @@ function LogoImg({ base, className = "h-8 w-auto", alt = "logo" }) {
             <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-50">
               <div className="h-40 bg-[url('/images/beloning-bon.jpg')] bg-cover bg-center" aria-hidden></div>
               <div className="p-5">
-                <h3 className="text-lg font-semibold">Supermarktbon t.w.v. ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬200</h3>
+                <h3 className="text-lg font-semibold">Supermarktbon t.w.v. ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬200</h3>
                 <p className="mt-2 text-sm text-neutral-700">Bij succesvolle <em>verhuur</em> via een partnerorganisatie.</p>
               </div>
             </article>
@@ -220,14 +224,14 @@ function LogoImg({ base, className = "h-8 w-auto", alt = "logo" }) {
               <div className="p-5">
                 <h3 className="text-lg font-semibold">5 dagen in Spanje (6p)</h3>
                 <p className="mt-2 text-sm text-neutral-700">Bij succesvolle <em>verkoop van een woning</em>. Verblijf in Finca La Perla Verde.</p>
-                <a href="https://enjoymicasa.be" target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-emerald-700 underline underline-offset-4">Meer over enjoymicasa<span aria-hidden>ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span></a>
+                <a href="https://enjoymicasa.be" target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-emerald-700 underline underline-offset-4">Meer over enjoymicasa<span aria-hidden>ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â</span></a>
               </div>
             </article>
             <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-50">
               <div className="h-40 bg-[url('/images/beloning-grond.jpg')] bg-cover bg-center" aria-hidden></div>
               <div className="p-5">
                 <h3 className="text-lg font-semibold">Verkoop van grond</h3>
-                <p className="mt-2 text-sm text-neutral-700">Beloning nog te bepalen ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â we houden je op de hoogte.</p>
+                <p className="mt-2 text-sm text-neutral-700">Beloning nog te bepalen ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â we houden je op de hoogte.</p>
               </div>
             </article>
           </div>
@@ -291,7 +295,7 @@ function LogoImg({ base, className = "h-8 w-auto", alt = "logo" }) {
       <footer className="border-t border-neutral-200 bg-neutral-50">
         <div className="mx-auto max-w-6xl px-4 py-10 text-sm text-neutral-600">
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <p>ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© {new Date().getFullYear()} Tip een Thuis. Alle rechten voorbehouden.</p>
+            <p>ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© {new Date().getFullYear()} Tip een Thuis. Alle rechten voorbehouden.</p>
             <div className="flex gap-4">
               <a href="#hoe" className="hover:text-neutral-800">Hoe werkt het</a>
               <a href="#wat" className="hover:text-neutral-800">Wat zoeken we</a>
