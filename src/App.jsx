@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 /**
- * Tip een Thuis ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Landing page (Vite + React + Tailwind)
+ * Tip een Thuis ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Landing page (Vite + React + Tailwind)
  * - Hero met achtergrondbanner (/public/images/banner.jpg)
  * - Hoe werkt het (met correcte JSX-link)
  * - Wat zoeken we
@@ -16,53 +16,6 @@ import React, { useState } from "react";
 function LogoImg({ base, className = "h-8 w-auto", alt = "logo" }) {
   const candidates = ['avif','webp','png','svg','jpg','jpeg']
   .map(ext => `/images/partners/${base}.${ext}`);
-  if (!src) return null;
-  return (
-    <img
-      src={src}
-      alt={alt}
-      className={className}
-      onError={() => setIdx((i) => i + 1)}
-      loading="lazy"
-    />
-  );
-}
-
-export default function App() {
-  const [form, setForm] = useState({
-    naam: "",
-    email: "",
-    rol: "Ik tip een pand",
-    type: "Huurwoning",
-    locatie: "",
-    beschrijving: "",
-    akkoord: false,
-  });
-  const [sent, setSent] = useState(false);
-
-  // PARTNERS: gebruik lokale bestandsnamen in /public/images/partners/
-  const partners = [
-    { key: "morelion",     name: "MORE LION",                        url: "https://www.more-lion.com/",
-      blurb: "Innovatie- en mobiliteitsstudio; faciliterend partner van het burgerinitiatief en projecten rond sociaal wonen." },
-    { key: "ehvv",         name: "Een Hart Voor Vluchtelingen",      url: "https://eenhartvoorvluchtelingen.be/",
-      blurb: "Begeleidt verhuur aan erkende vluchtelingen en ondersteunt nieuwkomers richting duurzame integratie." },
-    { key: "pandschap",    name: "Het Pandschap / Pandschap Invest", url: "https://pandschap.be/",
-      blurb: "Koopt/renoveert panden en zet ze in voor sociale verhuur met focus op kwaliteit en betaalbaarheid." },
-    { key: "cltgent",      name: "CLT Gent",                         url: "https://www.cltgent.be/",
-      blurb: "Community Land Trust die betaalbaar wonen realiseert door grond en woning te scheiden." },
-    { key: "orbit",        name: "Orbit vzw",                        url: "https://www.orbitvzw.be/",
-      blurb: "Werkt rond migratie, armoede en een menswaardig woonbeleid; verbindt lokale netwerken." },
-    { key: "thope",        name: "VZW Thope",                        url: "https://www.thopevzw.be/",
-      blurb: "Begeleidt erkende vluchtelingen en kwetsbare gezinnen naar en tijdens hun huurtraject." },
-    { key: "huizenvanvrede", name: "Huizen van de Vrede vzw",          url: "https://www.huizenvanvredevzw.be/",
-      blurb: "Zoekt en begeleidt huurwoningen in Brugge, met warme ondersteuning voor huurders en verhuurders." },
-    { key: "fedasil",      name: "Fedasil",                          url: "https://www.fedasil.be/",
-      blurb: "CoÃƒÆ’Ã‚Â¶rdineert opvang en doorstroming van verzoekers om internationale bescherming." },
-    { key: "iom",          name: "IOM (VN Migratieagentschap)",      url: "https://www.iom.int/",
-      blurb: "Internationale Organisatie voor Migratie; partner in duurzame woontrajecten." },
-    { key: "paths",        name: "PATHS-project",                    url: "https://www.fedasil.be/en/news/paths-project-housing",
-      blurb: "Zoekt huurwoningen in heel BelgiÃƒÆ’Ã‚Â« voor erkende vluchtelingen; verbindt eigenaars en huurders." },
-  ];
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -102,7 +55,7 @@ export default function App() {
             Iedereen verdient een <span className="text-emerald-700">thuis</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-800">
-            Veel mensen vinden moeilijk een woning. Vaak beschikken zij over een inkomen of ondersteuning, maar botsen ze op barriÃƒÆ’Ã‚Â¨res. Met <em>Tip een Thuis</em> bundelen we krachten om de instroom van beschikbare panden te vergroten ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â warm, professioneel en samen met jou.
+            Veel mensen vinden moeilijk een woning. Vaak beschikken zij over een inkomen of ondersteuning, maar botsen ze op barriÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨res. Met <em>Tip een Thuis</em> bundelen we krachten om de instroom van beschikbare panden te vergroten ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â warm, professioneel en samen met jou.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a href="#formulier" className="rounded-xl bg-emerald-600 px-6 py-3 font-medium text-white hover:bg-emerald-700">Deel je tip</a>
@@ -180,14 +133,14 @@ export default function App() {
               </ul>
             </div>
             <div className="rounded-2xl border border-neutral-200 bg-white p-6">
-              <h3 className="text-lg font-semibold">Heel BelgiÃƒÆ’Ã‚Â«</h3>
+              <h3 className="text-lg font-semibold">Heel BelgiÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â«</h3>
               <ul className="mt-3 space-y-2 text-neutral-700">
                 <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-600" />Huurwoningen via PATHS-project (Fedasil & IOM)</li>
                 <li className="flex items-start gap-2"><span className="mt-1 inline-block h-2 w-2 rounded-full bg-emerald-600" />Eigenaars die willen verhuren/verkopen aan de doelgroep</li>
               </ul>
             </div>
           </div>
-          <div className="mt-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm text-emerald-900">Ook buddyÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s en vrijwilligers zijn welkom!</div>
+          <div className="mt-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm text-emerald-900">Ook buddyÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s en vrijwilligers zijn welkom!</div>
         </div>
       </section>
 
@@ -208,7 +161,7 @@ export default function App() {
                   <input required value={form.naam} onChange={(e)=>setForm({...form, naam:e.target.value})} className="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2"/>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium">EÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Ëœmail</label>
+                  <label className="block text-sm font-medium">EÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“mail</label>
                   <input type="email" required value={form.email} onChange={(e)=>setForm({...form, email:e.target.value})} className="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2"/>
                 </div>
               </div>
@@ -258,7 +211,7 @@ export default function App() {
             <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-50">
               <div className="h-40 bg-[url('/images/beloning-bon.jpg')] bg-cover bg-center" aria-hidden></div>
               <div className="p-5">
-                <h3 className="text-lg font-semibold">Supermarktbon t.w.v. ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬200</h3>
+                <h3 className="text-lg font-semibold">Supermarktbon t.w.v. ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬200</h3>
                 <p className="mt-2 text-sm text-neutral-700">Bij succesvolle <em>verhuur</em> via een partnerorganisatie.</p>
               </div>
             </article>
@@ -267,14 +220,14 @@ export default function App() {
               <div className="p-5">
                 <h3 className="text-lg font-semibold">5 dagen in Spanje (6p)</h3>
                 <p className="mt-2 text-sm text-neutral-700">Bij succesvolle <em>verkoop van een woning</em>. Verblijf in Finca La Perla Verde.</p>
-                <a href="https://enjoymicasa.be" target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-emerald-700 underline underline-offset-4">Meer over enjoymicasa<span aria-hidden>ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â€</span></a>
+                <a href="https://enjoymicasa.be" target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-emerald-700 underline underline-offset-4">Meer over enjoymicasa<span aria-hidden>ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â</span></a>
               </div>
             </article>
             <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-50">
               <div className="h-40 bg-[url('/images/beloning-grond.jpg')] bg-cover bg-center" aria-hidden></div>
               <div className="p-5">
                 <h3 className="text-lg font-semibold">Verkoop van grond</h3>
-                <p className="mt-2 text-sm text-neutral-700">Beloning nog te bepalen ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â we houden je op de hoogte.</p>
+                <p className="mt-2 text-sm text-neutral-700">Beloning nog te bepalen ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â we houden je op de hoogte.</p>
               </div>
             </article>
           </div>
@@ -338,7 +291,7 @@ export default function App() {
       <footer className="border-t border-neutral-200 bg-neutral-50">
         <div className="mx-auto max-w-6xl px-4 py-10 text-sm text-neutral-600">
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <p>Ãƒâ€šÃ‚Â© {new Date().getFullYear()} Tip een Thuis. Alle rechten voorbehouden.</p>
+            <p>ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© {new Date().getFullYear()} Tip een Thuis. Alle rechten voorbehouden.</p>
             <div className="flex gap-4">
               <a href="#hoe" className="hover:text-neutral-800">Hoe werkt het</a>
               <a href="#wat" className="hover:text-neutral-800">Wat zoeken we</a>
