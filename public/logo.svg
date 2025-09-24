@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-label="Tip een Thuis">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect x="6" y="18" width="52" height="34" rx="6" fill="url(#g)"/>
+  <path d="M8 20l24 18L56 20" fill="#fff" opacity=".85"/>
+  <path d="M24 32l8-6 8 6v12h-6v-6h-4v6h-6z" fill="#fff"/>
+</svg>
