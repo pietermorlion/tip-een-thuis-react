@@ -16,7 +16,76 @@ export default function TipEenThuisSite() {
   const [sent, setSent] = useState(false);
 
   const partners = [
-    // ... partner array unchanged ...
+    {
+      name: "MORE LION",
+      blurb: "Innovatie- en mobiliteitsstudio; faciliterend partner van het burgerinitiatief en projecten rond sociaal wonen.",
+      url: "https://www.more-lion.com/",
+      favicon: "/images/partners/morelion.png",
+      logo: "/images/partners/morelion.png",
+    },
+    {
+      name: "Een Hart Voor Vluchtelingen",
+      blurb: "Begeleidt verhuur aan erkende vluchtelingen en ondersteunt nieuwkomers richting duurzame integratie.",
+      url: "https://eenhartvoorvluchtelingen.be/",
+      favicon: "/images/partners/ehvv.png",
+      logo: "/images/partners/ehvv.png",
+    },
+    {
+      name: "Het Pandschap / Pandschap Invest",
+      blurb: "Koopt/renoveert panden en zet ze in voor sociale verhuur met focus op kwaliteit en betaalbaarheid.",
+      url: "https://pandschap.be/",
+      favicon: "/images/partners/pandschap.png",
+      logo: "/images/partners/pandschap.png",
+    },
+    {
+      name: "CLT Gent",
+      blurb: "Community Land Trust die betaalbaar wonen realiseert door grond en woning te scheiden.",
+      url: "https://www.cltgent.be/",
+      favicon: "/images/partners/cltgent.png",
+      logo: "/images/partners/cltgent.png",
+    },
+    {
+      name: "Orbit vzw",
+      blurb: "Werkt rond migratie, armoede en een menswaardig woonbeleid; verbindt lokale netwerken.",
+      url: "https://www.orbitvzw.be/",
+      favicon: "/images/partners/orbit.png",
+      logo: "/images/partners/orbit.png",
+    },
+    {
+      name: "VZW Thope",
+      blurb: "Begeleidt erkende vluchtelingen en kwetsbare gezinnen naar en tijdens hun huurtraject.",
+      url: "https://www.thopevzw.be/",
+      favicon: "/images/partners/thope.png",
+      logo: "/images/partners/thope.png",
+    },
+    {
+      name: "Huizen van de Vrede vzw",
+      blurb: "Zoekt en begeleidt huurwoningen in Brugge, met warme ondersteuning voor huurders en verhuurders.",
+      url: "https://www.huizenvanvredevzw.be/",
+      favicon: "/images/partners/huizen-vrede.png",
+      logo: "/images/partners/huizen-vrede.png",
+    },
+    {
+      name: "Fedasil",
+      blurb: "Coördineert opvang en doorstroming van verzoekers om internationale bescherming.",
+      url: "https://www.fedasil.be/",
+      favicon: "/images/partners/fedasil.png",
+      logo: "/images/partners/fedasil.png",
+    },
+    {
+      name: "IOM (VN Migratieagentschap)",
+      blurb: "Internationale Organisatie voor Migratie; partner in duurzame woontrajecten.",
+      url: "https://www.iom.int/",
+      favicon: "/images/partners/iom.png",
+      logo: "/images/partners/iom.png",
+    },
+    {
+      name: "PATHS-project",
+      blurb: "Zoekt huurwoningen in heel België voor erkende vluchtelingen; verbindt eigenaars en huurders.",
+      url: "https://www.fedasil.be/en/news/paths-project-housing",
+      favicon: "/images/partners/paths.png",
+      logo: "/images/partners/paths.png",
+    },
   ];
 
   function handleSubmit(e) {
@@ -28,10 +97,40 @@ export default function TipEenThuisSite() {
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
       {/* Header */}
-      {/* ... header unchanged ... */}
+      <header className="sticky top-0 z-40 border-b border-neutral-200 bg-white/80 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+          <a href="#home" className="flex items-center gap-3">
+            <div className="grid h-9 w-9 place-items-center rounded-xl bg-emerald-600 font-bold text-white">T</div>
+            <span className="font-semibold tracking-tight">Tip een Thuis</span>
+          </a>
+          <nav className="hidden gap-6 text-sm md:flex">
+            <a href="#hoe" className="hover:text-emerald-700">Hoe werkt het</a>
+            <a href="#wat" className="hover:text-emerald-700">Wat zoeken we</a>
+            <a href="#beloning" className="hover:text-emerald-700">Beloning</a>
+            <a href="#partners" className="hover:text-emerald-700">Partners</a>
+            <a href="#formulier" className="hover:text-emerald-700">Formulier</a>
+            <a href="#faq" className="hover:text-emerald-700">FAQ</a>
+            <a href="#contact" className="hover:text-emerald-700">Contact</a>
+          </nav>
+          <a href="#formulier" className="rounded-xl bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700">Tip een pand</a>
+        </div>
+      </header>
 
       {/* Hero */}
-      {/* ... hero unchanged ... */}
+      <section id="home" className="bg-gradient-to-b from-emerald-50 to-transparent">
+        <div className="mx-auto max-w-4xl px-4 py-16 text-center">
+          <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+            Iedereen verdient een <span className="text-emerald-700">thuis</span>
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-700">
+            Veel mensen vinden moeilijk een woning. Vaak beschikken zij over een inkomen of ondersteuning, maar botsen ze op barrières. Met <em>Tip een Thuis</em> bundelen we krachten om de instroom van beschikbare panden te vergroten — warm, professioneel en samen met jou.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="#formulier" className="rounded-xl bg-emerald-600 px-6 py-3 font-medium text-white hover:bg-emerald-700">Deel je tip</a>
+            <a href="#hoe" className="rounded-xl border border-neutral-300 px-6 py-3 font-medium hover:border-neutral-400">Hoe werkt het?</a>
+          </div>
+        </div>
+      </section>
 
       {/* Hoe werkt het */}
       <section id="hoe" className="border-t border-neutral-200 bg-white">
@@ -78,7 +177,7 @@ export default function TipEenThuisSite() {
         </div>
       </section>
 
-      {/* ... rest of file unchanged ... */}
+      {/* ... rest van je bestand ongewijzigd (Wat zoeken we, Formulier, Beloning, Partners, etc.) ... */}
     </div>
   );
 }
