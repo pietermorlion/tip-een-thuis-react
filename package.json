@@ -6,7 +6,7 @@
                     "dev":  "vite",
                     "build":  "vite build",
                     "preview":  "vite preview",
-                    "postinstall":  "chmod +x node_modules/.bin/vite || true"
+                    "postinstall":  "node -e \"try{require(\u0027fs\u0027).chmodSync(\u0027node_modules/.bin/vite\u0027,0o755)}catch(e){}\""
                 },
     "dependencies":  {
                          "react":  "18.3.1",
